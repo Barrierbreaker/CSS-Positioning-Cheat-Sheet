@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id='example'>Обновите браузер</canvas>
+ <script>
+   /*Устанавливаем размеры канвы: example.width = 300; example.height = 300; и цвет рамки: ctx.strokeStyle = '#B70A02'; Затем рисуем основное поле (рамки доски): ctx.strokeRect(15, 15, 266, 266); ctx.strokeRect(18, 18, 260, 260); Теперь меняем цвет будущих клеток внутри доски: ctx.fillStyle = '#AF5200'; и заполняем все: ctx.fillRect(20, 20, 256, 256); Идея такая - не рисовать каждую клетку, а залить всю доску одним цветом (цветом клеток), а затем только нарисовать белые квадраты в нужных местах,*/
+ var example = document.getElementById("example");
+ var ctx = example.getContext('2d');
+ example.width = 300;
+ example.height = 300;
+ ctx.strokeStyle = '#B70A02'; // меняем цвет рамки
+ ctx.strokeRect(15, 15, 266, 266);
+ ctx.strokeRect(18, 18, 260, 260);
+ ctx.fillStyle = 'black'; // меняем цвет клеток
+ ctx.fillRect(20, 20, 256, 256);
+ for (i=0; i<8; i+=2)
+ for (j=0; j<8; j+=2) {
+ ctx.clearRect(20+i*32, 20+j*32, 32, 32);
+ ctx.clearRect(20+(i+1)*32, 20+(j+1)*32, 32, 32);
+ }
+     
+ </script>
+  <img src="jiLXiC9szUU.jpg" class="white" id="w1">
+   <img src="jiLXiC9szUU.jpg" class="white" id="w2">
+    <img src="jiLXiC9szUU.jpg" class="white" id="w3">
+     <img src="jiLXiC9szUU.jpg" class="white" id="w4">
+       <img src="jiLXiC9szUU.jpg" class="white" id="w5">
+   <img src="jiLXiC9szUU.jpg" class="white" id="w6">
+    <img src="jiLXiC9szUU.jpg" class="white" id="w7">
+     <img src="jiLXiC9szUU.jpg" class="white" id="w8">
+       <img src="jiLXiC9szUU.jpg" class="white" id="w9">
+   <img src="jiLXiC9szUU.jpg" class="white" id="w10">
+    <img src="jiLXiC9szUU.jpg" class="white" id="w11">
+     <img src="jiLXiC9szUU.jpg" class="white" id="w12">
+     
+     <img src="123.png" class="black" id="b1">
+        <img src="123.png" class="black" id="b2">
+           <img src="123.png" class="black" id="b3">
+              <img src="123.png" class="black" id="b4">
+              <img src="123.png" class="black" id="b5">
+        <img src="123.png" class="black" id="b6">
+           <img src="123.png" class="black" id="b7">
+              <img src="123.png" class="black" id="b8">
+              <img src="123.png" class="black" id="b9">
+        <img src="123.png" class="black" id="b10">
+           <img src="123.png" class="black" id="b11">
+              <img src="123.png" class="black" id="b12">
+     
+</body>
+</html>
